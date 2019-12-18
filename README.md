@@ -1,5 +1,7 @@
 # Feathers React Chat (TypeScript)
 
+**This project was adapted from the original [feathers-chat-react](https://github.com/feathersjs-ecosystem/feathers-chat-react).**
+
 A frontend for the [feathers-chat API](https://github.com/feathersjs/feathers-chat) using React with TypeScript.
 
 To run the example:

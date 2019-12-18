@@ -17,7 +17,7 @@ class Login extends Component<{}, State> {
   txtEmail = React.createRef<HTMLInputElement>()
   txtPassword = React.createRef<HTMLInputElement>()
 
-  login() {
+  login = () => {
     const email = this.txtEmail.current?.value
     const password = this.txtPassword.current?.value
 
@@ -27,7 +27,7 @@ class Login extends Component<{}, State> {
     }).catch(error => this.setState({ error: error.message }))
   }
 
-  signup() {
+  signup = () => {
     const email = this.txtEmail.current?.value
     const password = this.txtPassword.current?.value
     
@@ -36,9 +36,6 @@ class Login extends Component<{}, State> {
       .then(() => this.login())
   }
 
-  renderError = () => {
-      return <p>{ this.state.error }</p>
-  }
 
 
   render() {
@@ -46,7 +43,7 @@ class Login extends Component<{}, State> {
       <div className="row">
         <div className="col-12 col-6-tablet push-3-tablet text-center heading">
           <h1 className="font-100">Log in or signup</h1>
-          {this.renderError()}
+          <p>{ this.state.error }</p>
         </div>
       </div>
       <div className="row">
@@ -60,11 +57,11 @@ class Login extends Component<{}, State> {
               <input ref={this.txtPassword} className="block" type="password" name="password" placeholder="password" />
             </fieldset>
 
-            <button type="button" className="button button-primary block signup" onClick={() => this.login()}>
+            <button type="button" className="button button-primary block signup" onClick={this.login}>
               Log in
             </button>
 
-            <button type="button" className="button button-primary block signup" onClick={() => this.signup()}>
+            <button type="button" className="button button-primary block signup" onClick={this.signup}>
               Signup
             </button>
           </form>
