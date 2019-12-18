@@ -1,6 +1,6 @@
 {
   "name": "feathers-chat-react-typescript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@feathersjs/authentication-client": "^4.4.3",
@@ -21,6 +21,7 @@
     "socket.io-client": "^2.3.0",
     "typescript": "~3.7.2"
   },
+  "author": "Cody Parker <codyparker@gmail.com>, David Lueck <daff@neyeon.com>",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
